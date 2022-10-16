@@ -14,7 +14,7 @@ public class Entrega {
         Stack<String> pilha = new Stack<>();
         Scanner ler = new Scanner(System.in);
         
-        while(opcao<=2){
+        while((opcao==2)||(opcao==1)){
             System.out.println("Você está entregando as malotes? Se sim, tecle 1 para inserir o local.\nVocê está coletando os malotes? Se sim, tecle 2 para obter o próximo local de coleta.\nTecle 0 para cancelar e encerrar.");
             opcao=ler.nextInt();
             switch(opcao){
@@ -25,9 +25,6 @@ public class Entrega {
                 break;
                 case 2:
                     System.out.println("O próximo local de coleta é: "+pilha.pop());
-                break;
-                case 3:
-                    System.out.println("Operação cancelada e finalizada");
                 break;
                 default:
                     break;
